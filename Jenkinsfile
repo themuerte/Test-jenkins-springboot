@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'gradle bootRun'
+                sh 'java -jar build/libs/test-jenkis-0.0.1-SNAPSHOT.jar'
             }
         }
     }
