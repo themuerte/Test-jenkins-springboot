@@ -7,7 +7,7 @@ pipeline {
                 sh 'gradle clean build'
                 echo 'Build completed....'
             }
-        }`
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
