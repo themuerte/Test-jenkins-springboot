@@ -20,6 +20,7 @@ pipeline {
             }
             steps {
                 echo 'Building....'
+                sh 'java --version'
                 sh 'gradle build'
             }
         }
@@ -32,6 +33,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'java --version'
                 sh 'java -jar build/libs/test-jenkis-0.0.1-SNAPSHOT.jar'
             }
         }
